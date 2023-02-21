@@ -6,9 +6,10 @@ Rails.application.routes.draw do
   # Add new route to list the tasks
   get '/tasks', to: 'tasks#index'
 
+  get '/tasks/new', to: 'tasks#new'
+
   # Add new route to view the details of a task
   get '/tasks/:id', to: 'tasks#show', as: 'task'
 
-  
-  get '/tasks/new', to: 'tasks#new'
+  post '/tasks', to: 'tasks#create'
 end
